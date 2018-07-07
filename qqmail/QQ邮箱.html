@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+<link rel="stylesheet" type="text/css" href="css/1.css">
+<script src="js/jquery.js"></script>
+<script src="js/mail.js"></script>
+<script type="text/javascript">
+window.onload=function()
+{
+  var oTxt1=document.getElementById('txt1');
+
+  oTxt1.onkeydown=function(ev)
+  {
+    var oEvent=ev||event;
+
+    if(oEvent.keyCode!=8 && (oEvent.keyCode<48 || oEvent.keyCode>57) && (oEvent.keyCode<96 || oEvent.keyCode>105))
+    {
+      return false;
+    }
+  };
+};
+key();
+</script>
+</head>
+<body>
+<div class="container">
+ <!--header开始 -->
+  <div  class="header">
+    <a class="header_logo" href="#">QQ邮箱</a>
+      <div class="header_link">
+         <a href="#">基本版</a>&nbsp;|&nbsp;<a href="#">English</a>&nbsp;|&nbsp;<a href="#">手机版</a>&nbsp;|&nbsp; <a href="#">企业邮箱</a>
+      </div>
+  </div>
+   <!--header结束 -->
+
+   <!--content开始-->
+ <div class="content">
+   <div class="content_wrapper">
+     <div class="login_containter">
+       <div class="login">
+         <div class="header">
+           <div class="swith">
+             <a class="swith_ftn" hidefocus="true" id="swith_qlogin" href="javascript:void(0)">快速登录</a><a class="swith_ftn" hidefocus="true" id="swith_plogin" href="javascript:void(0)">账号密码登录</a>
+           </div>
+         </div>
+       </div>
+       <div class="text">
+      <div class="qlogin" style="display: none;">
+           <div class="qlogin_show">
+             <div class="qlogin_list">
+               <span class="qr">
+                 <span class="qr_safe">安全登录，防止被盗</span>
+                 <img class="qr_img" src="images/main.png" style="position: absolute; left:12px;">
+                 <span class="qr_name">
+                 <a class="qr_link" href="javascript:void(0)" target="_blank">使用QQ手机版扫描登录</a>
+                 </span>
+                 <span class="qr_img_out"></span>
+               </span>
+             </div>
+           </div>
+           <div class="bottom">
+               <div class="low_login" title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项">
+                 <a class="uncheck" href="javascript:void(0);"></a>
+                 <label class="low_login_wording">下次自动登录</label>
+               </div>
+               <a href="javascript:void(0);" class="link" target="_blank">
+                 注册新账号
+               </a>
+               <span class="dotted">|</span>
+               <a href="javascript:void(0);" class="link" target="_blank">
+                 意见反馈
+               </a>
+             </div>
+         </div>
+       <div class="web_login" style="display: block;">
+        <div class="web_login_show">
+          <div class="login_form">
+            <div class="tips" id="tips"></div>
+            <form action method="post" target="0">
+              <div class="uinArea">
+                <div class="inputOuter">
+                  <input type="text" id="txt1" class="inputstyle" name="u" placeholder="支持QQ号/邮箱/手机号登录"></input>
+                  <a class="uin_del" id="nin_del" href="javascript:void(0);" style="display: block"></a>
+                </div>
+              </div>
+              <div class="uinArea">
+                <div class="inputOuter">
+                  <input type="password" class="inputstyle" name="u" placeholder="QQ密码"></input>
+                </div>
+              </div>
+              <div class="submit">
+                <a class="login_button" href="javascript:void(0);" hidefocus="true">
+                  <input type="submit" value="登录" class="btn">
+                </a>
+                <div class="low_login" title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项" class="low_login">
+                  <a class="uncheck" href="javascript:void(0);"></a>
+                  <label class="low_login_wording">下次自动登录</label>
+                </div>
+              </div>
+            </form>
+            <div class="buttom">
+              <a href="javascript:void(0);" class="link" target="_blank">忘了密码？</a>
+              <span class="dotted">|</span>
+              <a href="javascript:void(0);" class="link" target="_blank">注册新帐号</a>
+              <span class="dotted">|</span>
+              <a href="javascript:void(0);" class="link" target="_blank">意见反馈</a>
+            </div>
+          </div>
+        </div>
+       </div>
+       </div>
+     </div>
+     <div class="login_pictures">
+       <div class="pic"></div>
+     </div>
+   </div>
+<!--     <div class="content_wrapper">
+   <div class="login_container" id="login" style="width: 334px; height: 374px; visibility: visible;"></div> 
+     <div class="content_form">
+       <div class="content_form_top">
+       <div class="content_text">
+        <a class="content_text_a" href="#" id="dl">快速登录</a>
+        <a class="content_text_b" href="#" id="dl2">账号密码登录</a>
+        </div>
+       </div>
+       <div class="content_qlogin" id="qw" style="display:none;">
+         <div class="content_qlogin_text">
+         请用<a href="#" target="_blank">QQ手机版</a>扫描二维码，或点击头像登录
+         </div>
+        <div class="content_login">
+          <div class="content_login_list">
+           <div class="img_left">
+           <img src="images/main.png" style="width:84px;height:84px;" /><br/>
+           <div class="spa">
+           <span>安全登录</span>
+           </div>
+           </div>
+           <div class="img_right">
+           <img class="img" src="images/main2.jpg" style="width:84px;height:84px;" /><br/>
+            <div class="spa1">
+           <span>商宿</span>
+           </div>
+           </div>
+         </div>
+       </div>
+        <div class="content_bottom">
+           <div class="content_bottom_box" title="为了确保你的信息安全，不建议在网吧等公共环境勾选此项">
+             <a class="uncheck" href="javascript:;"></a>
+             <label class="content_bottom_wording">下次自动登录</label>
+           </div>
+           <a href="javascript:;" target="blank" class="link">注册新帐号</a>
+           <span class="dot">|</span>
+           <a href="javascript:;" target="blank" class="link">意见反馈</a>
+         </div>
+       </div>
+       <div class="content_form_form" id="qe" style="display:block;">
+          <form>
+          <input id="txt1" type="text" name="firstname" placeholder="支持QQ号/邮箱/手机号登录" value="">
+          <br><br>
+          <input type="password" name="lastname" placeholder="QQ密码" value="">
+           <br><br>
+           <div title="为了确保您的信息安全，不建议在网吧等公共环境勾选此项">
+          <label><input  type="checkbox" class="checkbox" value="Checkbox" style="width:16px;height:16px;text-align:left;">下次自动登录</label></div>
+          <br><br>
+          <a><input type="submit" class="btn1" value="登 录"></a>
+          </form>
+
+       </div>
+     </div>
+       <div class="content_pict">
+        <div class="content_pict_picture" style="background-image:url(images/main1.jpg);background-position:right 20px;"></div>
+       </div>
+    </div> -->
+ </div>
+    <!--content结束-->
+
+   <!--footer开始-->
+<div class="footer">
+ <a href="#" target="_blank">关于腾讯</a>&nbsp;|&nbsp;
+ <a href="#" target="_blank">服务条款</a>&nbsp;|&nbsp;
+ <a href="#" target="_blank">客服中心</a>&nbsp;|&nbsp;
+ <a href="#" target="_blank">联系我们</a>&nbsp;|&nbsp;
+ <a href="#" target="_blank">帮助中心</a>&nbsp;|&nbsp;
+<span class="gray">©1998 - 2017 Tencent Inc. All Rights Reserved.</span>
+</div>
+ <!--footer结束-->
+</div>
+</body>
+</html>
